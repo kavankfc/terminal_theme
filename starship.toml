@@ -1,0 +1,116 @@
+format = """
+$username$directory\
+$git_branch$git_status\
+$custom $memory_usage $cmd_duration\
+$docker_context$kubernetes\
+$python\
+\n $time$character
+"""
+
+[os]
+disabled = false # Disabled by default
+
+[username]
+show_always = true
+style_user = "yellow bold"
+disabled = false
+
+[character]
+error_symbol = "[✗](bold #ff0000)"
+success_symbol = "[➜](bold #9efa00)"
+
+[custom.cpu]
+command = "top -bn1 | grep 'Cpu(s)' | awk '{print \"󰍛 CPU:\" 100 - $8 \"%\"}'"
+when = "true"
+shell = ["bash"]
+style = "bold blue"
+format = " [$output]($style)"
+
+[memory_usage]
+disabled = false
+threshold = -1
+symbol = " "
+style = "bold dimmed green"
+format = "[${symbol}Mem:${ram_pct}]($style)"
+
+[battery]
+disabled = false
+
+[time]
+disabled = false
+format = "🕒 [$time]($style) "
+style = "bright-white"
+
+# Clear visibility for exit codes
+[status]
+style = "bg:red"
+symbol = "💣 "
+format = '[\[$symbol$status\]]($style) '
+disabled = false
+
+[buf]
+symbol = " "
+
+[cmake]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[directory]
+read_only = " 󰌾"
+
+[docker_context]
+symbol = "🐳"
+format = "via [$symbol$context]($style) "
+style = "blue bold"
+# only_with_files = true
+detect_files = ["docker-compose.yml", "docker-compose.yaml", "Dockerfile"]
+detect_folders = []
+disabled = false
+
+[kubernetes]
+disabled = false              # the module is off by default
+symbol   = "🕸️"
+format   = "(fg:#A8B9FE bg:none)[$symbol $context(/$namespace)]($style)(fg:#A8B9FE bg:none) "
+style    = "fg:#A8B9FE"       # kube-blue
+
+[hostname]
+ssh_symbol = " "
+disabled = true
+
+[git_branch]
+symbol = " "
+
+[git_commit]
+tag_symbol = '  '
+
+[python]
+symbol = " "
+
+# [golang]
+# symbol = " "
+
+# [nodejs]
+# symbol = " "
+
+# [package]
+# symbol = "󰏗 "
+
+# [rust]
+# symbol = "󱘗 "
+
+# [java]
+# symbol = " "
+
+# [scala]
+# symbol = " "
+
+[os.symbols]
+Linux = " "
+Macos = " "
+Raspbian = " "
+Ubuntu = " "
+
+
+
