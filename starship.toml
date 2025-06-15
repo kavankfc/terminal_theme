@@ -4,7 +4,7 @@ $git_branch$git_status\
 $custom $memory_usage $cmd_duration\
 $docker_context$kubernetes\
 $python\
-\n $time$character
+\n $time$os$character
 """
 
 [os]
