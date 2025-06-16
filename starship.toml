@@ -6,7 +6,7 @@ $fill \
 $python\
 $docker_context$kubernetes\
 $custom$memory_usage$cmd_duration
-$status$character
+$character$status
 """
 
 [fill]
