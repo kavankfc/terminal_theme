@@ -1,7 +1,5 @@
 format = """
-$os\
-$time\
-$directory\
+$os$time$directory\
 $git_branch$git_status$git_metrics\
 [](fg:#FCF392)\
 $custom $memory_usage $cmd_duration\
