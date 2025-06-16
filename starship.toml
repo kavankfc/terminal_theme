@@ -83,7 +83,7 @@ disabled = false
 [kubernetes]
 disabled = false              # the module is off by default
 symbol   = "🕸️"
-format   = "(fg:#A8B9FE bg:none)[$symbol $context(/$namespace)]($style)(fg:#A8B9FE bg:none) "
+format   = "(fg:#A8B9FE bg:none)[$symbol $context(/$namespace)]($style)(fg:#A8B9FE bg:none)"
 style    = "fg:#A8B9FE"       # kube-blue
 
 [hostname]
