@@ -1,3 +1,3 @@
 My terminal theme
 
-![image](image.png)
+![image](example.png)
