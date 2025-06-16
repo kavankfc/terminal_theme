@@ -16,8 +16,8 @@ style_user = "yellow bold"
 disabled = false
 
 [character]
-error_symbol = "[✗](bold #ff0000)"
 success_symbol = "[➜](bold #9efa00)"
+error_symbol = "[✗](bold #E84D44)"
 
 [custom.cpu]
 command = "top -bn1 | grep 'Cpu(s)' | awk '{print \"󰍛 CPU:\" 100 - $8 \"%\"}'"
@@ -80,7 +80,13 @@ ssh_symbol = " "
 disabled = true
 
 [git_branch]
+format = '[ $symbol$branch(:$remote_branch) ]($style)'
 symbol = " "
+style = "fg:#1C3A5E bg:#FCF392"
+
+[git_status]
+format = '[$all_status]($style)'
+style = "fg:#1C3A5E bg:#FCF392"
 
 [git_commit]
 tag_symbol = '  '
