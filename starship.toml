@@ -2,11 +2,16 @@ format = """
 $os$time$directory\
 $git_branch$git_status$git_metrics\
 [](fg:#FCF392)\
-$custom $memory_usage $cmd_duration\
+$fill \
+$python\
 $docker_context$kubernetes\
-$python
+$custom$memory_usage$cmd_duration
 $character
 """
+
+[fill]
+style = "white"
+symbol = '-'
 
 [os]
 disabled = false # Disabled by default
@@ -27,14 +32,14 @@ command = "top -bn1 | grep 'Cpu(s)' | awk '{print \"󰍛 CPU:\" 100 - $8 \"%\"}'
 when = "true"
 shell = ["bash"]
 style = "bold blue"
-format = " [$output]($style)"
+format = " [$output ]($style)"
 
 [memory_usage]
 disabled = false
 threshold = -1
 symbol = " "
 style = "bold dimmed green"
-format = "[${symbol}Mem:${ram_pct}]($style)"
+format = "[${symbol}Mem:${ram_pct} ]($style)"
 
 [battery]
 disabled = false
