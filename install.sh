@@ -11,6 +11,8 @@ fc-cache -fv
 echo "Downloaded and unzipped ${name}"
 rm $name
 
+# install zsh
+sudo apt install zsh fzf
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 # install zsh plugins (zsh-autosuggestions, zsh-syntax-highlighting)
