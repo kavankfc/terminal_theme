@@ -3,7 +3,7 @@ $os$time$directory\
 $git_branch$git_status$git_metrics\
 [](fg:#FCF392)\
 $fill \
-$python\
+$conda$python\
 $docker_context$kubernetes\
 $custom$memory_usage$cmd_duration
 $character$status
